@@ -6,7 +6,7 @@ import json
 def getweather():
     lat = '33.4484367'
     long = '-112.074141'
-    appid = 'a86a7958a4911de6e45a564ecdd933ac'
+    appid = ''
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&units=imperial&appid={appid}"
 
     weather = requests.request("GET", url)
