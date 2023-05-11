@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Hello!</h1>
+            <p>In {{ location.name }}, {{location.state}} {{location.country}}</p>
+            <p>The current temperature is: {{ weather.main.temp }}</p>
+            <p>The current conditions are: {{ conditions.main }}</p>
+            <p>The wind speed is: {{ weather.wind.speed }}</p>
+            <p>Sunrise is at: {{ suntimes.sunrise}} and sunset is at: {{ suntimes.sunset}}</p>
+            <p><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/home/" role="button">New Location &raquo;</a></p>
+        </div>
+    </div>
+
+
+        <hr>
+
+    </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+    <p>&copy; Aaron Oliver 2023</p>
+</footer>
+{% endblock %}

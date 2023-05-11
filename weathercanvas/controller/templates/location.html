@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h5 class="display-4">Please Choose a Location:</h5>
+            <p>
+            {% for item in geo %}
+                <a href="http://127.0.0.1:8000/getweather/{{ item.lat }}/{{ item.lon }}/">{{ item.name }}, {{ item.state }}, {{ item.country}} - lat: {{ item.lat }}, long: {{ item.lon }}</a><br>
+            {% endfor %}
+            </p>
+        </div>
+    </div>
+
+
+        <hr>
+
+    </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+    <p>&copy; Aaron Oliver 2023</p>
+</footer>
+{% endblock %}
